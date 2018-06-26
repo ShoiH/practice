@@ -1,0 +1,116 @@
+Sub 全角数字を半角数字に()
+
+Dim SearchCell As Variant
+Dim SearchSh As Worksheet
+
+Dim SearchWb As Workbook
+
+Dim buf As Variant
+
+Dim Str As String
+
+Dim StrLen As Long
+
+Dim i As Integer
+Dim j As Integer
+Dim k As Integer
+
+Dim TestInt As Integer
+
+Dim MaxCol As Integer
+Dim MaxRow As Integer
+
+Set SearchWb = ThisWorkbook
+
+MaxCol = 52
+MaxRow = 300
+
+For Each SearchSh In SearchWb.Worksheets
+
+    For j = 1 To MaxCol
+        
+        For k = 1 To MaxRow
+        
+            Set SearchCell = SearchSh.Cells(k, j)
+        
+            If Not IsNull(SearchCell) Then
+    
+                If Not SearchCell = "" Then
+                
+                    buf = SearchCell.Value
+                    Str = CStr(buf)
+                    StrLen = Len(Str)
+                        
+                    For i = 0 To StrLen
+                    
+                        Str = Replace(Str, "１", "1")
+                        
+                    Next i
+                                
+                    For i = 0 To StrLen
+                    
+                        Str = Replace(Str, "２", "2")
+                        
+                    Next i
+                    
+                    For i = 0 To StrLen
+                    
+                        Str = Replace(Str, "３", "3")
+                        
+                    Next i
+                    
+                    For i = 0 To StrLen
+                    
+                        Str = Replace(Str, "４", "4")
+                        
+                    Next i
+                    
+                    For i = 0 To StrLen
+                    
+                        Str = Replace(Str, "５", "5")
+                        
+                    Next i
+                    
+                    For i = 0 To StrLen
+                    
+                        Str = Replace(Str, "６", "6")
+                        
+                    Next i
+                    
+                    For i = 0 To StrLen
+                    
+                        Str = Replace(Str, "７", "7")
+                        
+                    Next i
+                    
+                    For i = 0 To StrLen
+                    
+                        Str = Replace(Str, "８", "8")
+                        
+                    Next i
+                    
+                    For i = 0 To StrLen
+                    
+                        Str = Replace(Str, "９", "9")
+                        
+                    Next i
+                    
+                    For i = 0 To StrLen
+                    
+                        Str = Replace(Str, "０", "0")
+                        
+                    Next i
+                    
+                    SearchSh.Cells(k, j) = Str
+                
+                End If
+                
+            End If
+        
+        Next k
+        
+    Next j
+      
+Next
+
+End Sub
