@@ -14,6 +14,9 @@ Dim StrLen As Long
 Dim i As Integer
 Dim j As Integer
 Dim k As Integer
+Dim l As Integer
+
+Dim MuitiBytes(9) As String
 
 Dim TestInt As Integer
 
@@ -24,6 +27,8 @@ Set SearchWb = ThisWorkbook
 
 MaxCol = 52
 MaxRow = 300
+
+MultiBytes = Array("１", "２", "３", "４", "５", "６", "７", "８", "９", "０")
 
 For Each SearchSh In SearchWb.Worksheets
 
@@ -40,65 +45,15 @@ For Each SearchSh In SearchWb.Worksheets
                     buf = SearchCell.Value
                     Str = CStr(buf)
                     StrLen = Len(Str)
+                    
+                    For i = 0 To 9
+                    
+                        For l = 0 To StrLen
                         
-                    For i = 0 To StrLen
-                    
-                        Str = Replace(Str, "１", "1")
+                            Str = Replace(Str, MultiBytes(i), i)
                         
-                    Next i
-                                
-                    For i = 0 To StrLen
+                        Next l
                     
-                        Str = Replace(Str, "２", "2")
-                        
-                    Next i
-                    
-                    For i = 0 To StrLen
-                    
-                        Str = Replace(Str, "３", "3")
-                        
-                    Next i
-                    
-                    For i = 0 To StrLen
-                    
-                        Str = Replace(Str, "４", "4")
-                        
-                    Next i
-                    
-                    For i = 0 To StrLen
-                    
-                        Str = Replace(Str, "５", "5")
-                        
-                    Next i
-                    
-                    For i = 0 To StrLen
-                    
-                        Str = Replace(Str, "６", "6")
-                        
-                    Next i
-                    
-                    For i = 0 To StrLen
-                    
-                        Str = Replace(Str, "７", "7")
-                        
-                    Next i
-                    
-                    For i = 0 To StrLen
-                    
-                        Str = Replace(Str, "８", "8")
-                        
-                    Next i
-                    
-                    For i = 0 To StrLen
-                    
-                        Str = Replace(Str, "９", "9")
-                        
-                    Next i
-                    
-                    For i = 0 To StrLen
-                    
-                        Str = Replace(Str, "０", "0")
-                        
                     Next i
                     
                     SearchSh.Cells(k, j) = Str
