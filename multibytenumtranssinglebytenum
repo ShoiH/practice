@@ -28,7 +28,7 @@ Set SearchWb = ThisWorkbook
 MaxCol = 52
 MaxRow = 300
 
-MultiBytes = Array("１", "２", "３", "４", "５", "６", "７", "８", "９", "０")
+MultiBytes = Array("０", "１", "２", "３", "４", "５", "６", "７", "８", "９")
 
 For Each SearchSh In SearchWb.Worksheets
 
