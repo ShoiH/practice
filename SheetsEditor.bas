@@ -1,7 +1,7 @@
 Attribute VB_Name = "Module1"
 Dim FileName As String
 
-Sub ƒV[ƒg–¼æ“¾()
+Sub ã‚·ãƒ¼ãƒˆåå–å¾—()
 
 Dim Wb As Workbook
 Dim Sh
@@ -11,9 +11,9 @@ Dim i As Integer
 
 Application.ScreenUpdating = False
 
-Call ƒtƒ@ƒCƒ‹–¼æ“¾
+Call ãƒ•ã‚¡ã‚¤ãƒ«åå–å¾—
 
-Call ƒWƒ‡ƒu–¼æ“¾
+Call ã‚¸ãƒ§ãƒ–åå–å¾—
 
 Set Wb = Workbooks.Open(FileName)
 
@@ -21,7 +21,7 @@ i = 1
 
 ThisWorkbook.Worksheets(1).Range("B:B").Clear
 ThisWorkbook.Worksheets(1).Range("A:A").Interior.Color = RGB(255, 255, 255)
-ThisWorkbook.Worksheets(1).Cells(1, 2).Value = "ƒV[ƒg–¼"
+ThisWorkbook.Worksheets(1).Cells(1, 2).Value = "ã‚·ãƒ¼ãƒˆå"
 
 For Each Sh In Wb.Worksheets
 
@@ -37,7 +37,7 @@ Wb.Close
 Application.ScreenUpdating = True
 
 End Sub
-Sub ƒV[ƒg–¼İ’è()
+Sub ã‚·ãƒ¼ãƒˆåè¨­å®š()
 
 Dim Wb As Workbook
 Dim Sh
@@ -57,7 +57,7 @@ i = 1
 
 For Each Sh In Wb.Worksheets
 
-    Sh.Name = CStr(i) + "¬ŒÜ˜Y"
+    Sh.Name = CStr(i) + "å°äº”éƒ"
     i = i + 1
 
 Next Sh
@@ -68,7 +68,6 @@ For Each Sh In Wb.Worksheets
 
     ShName = ThisWorkbook.Worksheets(1).Cells(i + 1, 2).Value
     Sh.Name = ShName
-    Sh.Cells(1, 1).Value = "¡" + CStr(ThisWorkbook.Worksheets(1).Cells(i + 1, 2).Value)
     Sh.Select
     Sh.Cells(1, 1).Select
     i = i + 1
@@ -88,7 +87,7 @@ Application.DisplayAlerts = True
 Application.ScreenUpdating = True
 
 End Sub
-Sub ƒWƒ‡ƒu–¼æ“¾()
+Sub ã‚¸ãƒ§ãƒ–åå–å¾—()
 
 Dim Wb As Workbook
 Dim Sh
@@ -105,7 +104,7 @@ Set Wb = Workbooks.Open(SetFileName)
 i = 1
 
 ThisWorkbook.Worksheets(1).Range("C:C").Clear
-ThisWorkbook.Worksheets(1).Cells(1, 3).Value = "ƒWƒ‡ƒu–¼"
+ThisWorkbook.Worksheets(1).Cells(1, 3).Value = "ã‚¸ãƒ§ãƒ–å"
 
 For Each Sh In Wb.Worksheets
 
@@ -118,13 +117,13 @@ Next Sh
 Wb.Close
 
 End Sub
-Sub ƒtƒ@ƒCƒ‹–¼æ“¾()
+Sub ãƒ•ã‚¡ã‚¤ãƒ«åå–å¾—()
 
     FileName = Application.GetOpenFilename
     ThisWorkbook.Worksheets(1).Cells(1, 4).Value = FileName
 
 End Sub
-Sub ƒV[ƒg–¼‰Šú‰»()
+Sub ã‚·ãƒ¼ãƒˆååˆæœŸåŒ–()
 
 Dim Wb As Workbook
 Dim Sh
@@ -142,7 +141,7 @@ i = 1
 
 For Each Sh In Wb.Worksheets
 
-    Sh.Name = CStr(i) + "¬ŒÜ˜Y"
+    Sh.Name = CStr(i) + "å°äº”éƒ"
     i = i + 1
 
 Next Sh
@@ -150,7 +149,7 @@ Next Sh
 Wb.Close
 
 End Sub
-Sub d•¡ƒ`ƒFƒbƒN()
+Sub é‡è¤‡ãƒã‚§ãƒƒã‚¯()
 
     Dim Str As String
     Dim MaxRow As Integer
@@ -193,13 +192,13 @@ Sub d•¡ƒ`ƒFƒbƒN()
     
     If ErrFlag = 1 Then
         
-        MsgBox ("d•¡’l‚ª‚ ‚è‚Ü‚·" & vbCrLf & Juhuku)
+        MsgBox ("é‡è¤‡å€¤ãŒã‚ã‚Šã¾ã™" & vbCrLf & Juhuku)
         
     
     End If
 
 End Sub
-Sub ƒV[ƒg’Ç‰Á()
+Sub ã‚·ãƒ¼ãƒˆè¿½åŠ ()
 
 Dim Wb As Workbook
 Dim Sh
